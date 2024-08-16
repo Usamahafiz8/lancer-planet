@@ -25,18 +25,16 @@ export default function EDCard({ data }: Props) {
       <Image
         className="rounded"
         src={data.imgUrl}
-        width={600}
-        height={1000}
+        width={400}
+        height={500}
         alt=""
       />
-      <div className="rounded-b absolute bottom-0 text-start p-4 text-white backdrop-blur w-full flex flex-col space-y-2">
+      <div className="rounded-b absolute bottom-0 text-start p-4 text-white backdrop-blur-3xl w-full flex flex-col space-y-2">
         <h3 className="font-semibold">{data.name}</h3>
         <p className="text-xs font-thin">
-          {data.professionalTitle} • Phoenix, AZ
-          <br />
-          84% Skill Score
+          {data.professionalTitle} • Islamabad, Pakistan
         </p>
-        <Link href="#" className="underline text-xs font-thin">
+        <Link href="https://muhammadosama.netlify.app/" className="underline text-xs font-thin">
           View Profile
         </Link>
       </div>

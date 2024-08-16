@@ -12,28 +12,17 @@ type Dev = {
 };
 
 const devs: Dev[] = [
+  
   {
-    imgUrl: "/assets/developers/umar.jpg",
-    name: "Umar Khayam",
-    professionalTitle: "Machine Learning Developer",
+    imgUrl: "/assets/developers/osama.png",
+    name: "Muhammad Osama Anwar",
+    professionalTitle: "Software Engineer",
     profileLink: "#",
   },
   {
-    imgUrl: "/assets/developers/zeeshan.jpg",
-    name: "Zeeshan Ahmad",
-    professionalTitle: "Machine Learning Developer",
-    profileLink: "#",
-  },
-  {
-    imgUrl: "/assets/developers/haseeb.jpeg",
-    name: "Haseeb Ul Rehman",
-    professionalTitle: "Machine Learning Developer",
-    profileLink: "#",
-  },
-  {
-    imgUrl: "/assets/developers/zulkifal.jpg",
-    name: "Zulkifal Qayyum",
-    professionalTitle: "Machine Learning Developer",
+    imgUrl: "/assets/developers/umar.png",
+    name: "Umar Khitab",
+    professionalTitle: "Software Engineer",
     profileLink: "#",
   },
 ];
@@ -44,13 +33,13 @@ export default function ExceptionalDevelopers({}: Props) {
       <h2 className="w-[80%] md:w-[60%] lg:w-[40%] text-4xl font-extrabold text-h2clr">
         Meet The Exceptional Developers In Our Network
       </h2>
-      <p className="w-[90%] md:w-[70%] lg:w-[45%]">
+      <p className="w-[90%] md:w-[70%] lg:w-[45%] text-xl ">
         Our diverse remote hiring network includes the top talented developers
         from all over the world, carefully vetted to work on all types of
         software development projects without letting you go through the hiring
         hassle.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-[90%] mx-auto gap-4 py-8">
+      <div className="flex justify-center gap-4 py-8">
         {devs.map((dev: any, index: number) => {
           return <EDCard key={index} data={dev} />;
         })}

@@ -13,10 +13,10 @@ export default function Home() {
 
       <Header />
       <HeroSection />
+      <ExceptionalDevelopers />
       <HiringSteps />
       <WeAreGlobal />
       {/* <TechStack /> */}
-      {/* <ExceptionalDevelopers /> */}
       <Footer />
     </>
   );
