@@ -6,6 +6,9 @@ type Props = {};
 
 export default function WeAreGlobal({}: Props) {
   return (
+    <div className="flex  items-center justify-center">
+    <div className="container">
+
     <div className="bg-[url(https://remotebase.com/images/overview/landing/stats-img.webp)] bg-no-repeat bg-center">
       <div className="w-full h-full bg-globalOverlay/60 bg-opacity-25 flex flex-col justify-center min-h-screen space-y-8 pl-10">
         <h2 className="text-4xl lg:text-5xl font-extrabold">We are Global</h2>
@@ -25,6 +28,8 @@ export default function WeAreGlobal({}: Props) {
           Find Talent
         </Link>
       </div>
+      </div>
+    </div>
     </div>
   );
 }

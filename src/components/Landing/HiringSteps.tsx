@@ -33,7 +33,13 @@ const steps: StepType[] = [
 
 export default function HiringSteps({}: Props) {
   return (
-    <div className="text-center flex flex-col items-center justify-center space-y-6 my-20">
+    <div
+    className="flex flex-col justify-center items-center">
+
+    <div 
+    className="container ">
+
+    <div className="  text-center flex flex-col items-center justify-center space-y-6 my-20">
       <h2 className="w-[80%] md:w-[60%] lg:w-[40%] text-4xl font-extrabold text-h2clr">
         Hire Your Ideal Remote Developer in 3 Simple Steps
       </h2>
@@ -49,5 +55,7 @@ export default function HiringSteps({}: Props) {
         })}
       </div>
     </div>
+        </div>
+        </div>
   );
 }

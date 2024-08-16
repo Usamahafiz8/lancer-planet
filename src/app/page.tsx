@@ -10,12 +10,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
+
       <Header />
       <HeroSection />
       <HiringSteps />
-      <TechStack />
       <WeAreGlobal />
-      <ExceptionalDevelopers />
+      {/* <TechStack /> */}
+      {/* <ExceptionalDevelopers /> */}
       <Footer />
     </>
   );
