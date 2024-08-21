@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
     //Add user info
 
-    const { u_id, first_name, last_name, country, phoneNumber } = await req.json();
+    const { u_id, first_name, last_name, country } = await req.json();
 
     const already = await db.select().from(userInfoTable).where(eq(u_id, userInfoTable.u_id));
     if (already[0]) {
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     console.log("Already:", already);
 
     try {
-        const res = await db.insert(userInfoTable).values({ u_id, first_name, last_name, country, phoneNumber }).returning();
+        const res = await db.insert(userInfoTable).values({ u_id, first_name, last_name, country }).returning();
         return NextResponse.json({ status: "success", data: res[0] });
 
     } catch (e) {

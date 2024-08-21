@@ -13,7 +13,8 @@ export async function GET(req: NextRequest, { params: { u_id } }: { params: { u_
         firstName: userInfoTable.first_name,
         lastName: userInfoTable.last_name,
         country: userInfoTable.country,
-        phoneNumber: userInfoTable.phoneNumber
+        // @ts-ignore
+        // phoneNumber: userInfoTable.phoneNumber
     })
         .from(userInfoTable).innerJoin(usersTable, eq(usersTable.u_id, userInfoTable.u_id)).where(eq(usersTable.u_id, +u_id));
 

@@ -47,6 +47,7 @@ function SignUp() {
       process.env.NEXT_PUBLIC_MAGIC_PUBLISHABLE_KEY ??
         "pk_live_7B848874FC801890",
       {
+        // @ts-ignore
         network: process.env.NEXT_PUBLIC_ETH_NETWORK ?? "sepolia", // Ethereum testnet
       }
     );
