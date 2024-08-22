@@ -42,26 +42,26 @@ export type CertificationForm = {
     date: string;
 };
 
-// export type SocialLinks = {
-//     github: string;
-//     discord: string;
-//     stackoverflow: string;
-//     linkedin: string;
-//     twitter: string;
-// };
+export type SocialLinks = {
+    github: string;
+    discord: string;
+    stackoverflow: string;
+    linkedin: string;
+    twitter: string;
+};
 
 
-// export type FreelancerProfileType = {
-//     title: string;
-//     avatar: File | null;
-//     description: string;
-//     workHistory: EmploymentForm[];
-//     educations: EducationForm[];
-//     certifications: CertificationForm[];
-//     socialLinks: SocialLinks;
-//     portfolio: PortfolioForm[];
-//     skillTags: string[]
-// }
+export type FreelancerProfileType = {
+    title: string;
+    avatar: File | null;
+    description: string;
+    workHistory: EmploymentForm[];
+    educations: EducationForm[];
+    certifications: CertificationForm[];
+    socialLinks: SocialLinks;
+    portfolio: PortfolioForm[];
+    skillTags: string[]
+}
 export async function POST(req: NextRequest) {
     const {
         u_id,

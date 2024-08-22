@@ -1,22 +1,18 @@
 "use client";
 
-// You need to import our styles for the button to look right. Best to import in the root /layout.tsx but this is fine
 import "@uploadthing/react/styles.css";
+import { UploadButton } from "@/utils/uploadthing";
 
-import { UploadButton } from "@uploadthing/react";
-
-import { OurFileRouter } from "./../app/api/uploadthing/core";
-
-export default function UploadFile({ setPhoto }: { setPhoto: any }) {
+export default function UploadFile({ setPhoto }: { setPhoto: (url: string) => void }) {
   return (
     <div className="">
-      <UploadButton<OurFileRouter>
+      <UploadButton
         endpoint="imageUploader"
         onClientUploadComplete={(res) => {
           // Do something with the response
           console.log("Files: ", res);
-          if (res) {
-            setPhoto(res[0].fileUrl);
+          if (res && res.length > 0) {
+            setPhoto(res[0].url); // Use the correct key for the file URL
           }
         }}
         onUploadError={(error: Error) => {
