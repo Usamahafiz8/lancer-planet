@@ -43,3 +43,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 impotant links
 Image loader = https://uploadthing.com/dashboard
 DB = https://console.neon.tech/app/projects/aged-wildflower-05053305/branches/br-bitter-bird-a5ru4gzg/tables?database=lancer-planet-dev-db
+OPENAI_API_KEY = https://platform.openai.com/api-keys

@@ -51,6 +51,8 @@ export default function ReviewProject({
         description: state.description,
       }),
     });
+    console.log('data');
+    
     const data: { data: { message: { content: string } } } = await res.json();
     const { status, suggestion } = JSON.parse(data.data.message.content);
     console.log(status, suggestion);
