@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import NotificationsDropDown from "./NotificationsDropDown";
 import AppsDropDown from "./AppsDropDown";
 import ProfileDropDown from "./ProfileDropDown";
+import Image from "next/image";
 
 type Props = {};
 
@@ -183,7 +184,7 @@ export default function DashboardSkelton({}: Props) {
               onClick={() => handleTabOpener("TabProfile")}
             >
               <span className="sr-only">Open user menu</span>
-              <img
+              <Image
                 className="w-8 h-8 rounded-full"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png"
                 alt="user photo"
