@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type Props = { open: boolean };
@@ -19,7 +20,7 @@ function NotificationsDropDown({ open }: Props) {
           className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
         >
           <div className="flex-shrink-0">
-            <img
+            <Image
               className="w-11 h-11 rounded-full"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
               alt="Bonnie Green avatar"
@@ -55,7 +56,7 @@ function NotificationsDropDown({ open }: Props) {
           className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
         >
           <div className="flex-shrink-0">
-            <img
+            <Image
               className="w-11 h-11 rounded-full"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
               alt="Jese Leos avatar"
@@ -93,7 +94,7 @@ function NotificationsDropDown({ open }: Props) {
           className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
         >
           <div className="flex-shrink-0">
-            <img
+            <Image
               className="w-11 h-11 rounded-full"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
               alt="Joseph McFall avatar"
@@ -135,7 +136,7 @@ function NotificationsDropDown({ open }: Props) {
           className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
         >
           <div className="flex-shrink-0">
-            <img
+            <Image
               className="w-11 h-11 rounded-full"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
               alt="Roberta Casas image"
