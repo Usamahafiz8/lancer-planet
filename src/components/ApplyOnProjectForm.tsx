@@ -14,17 +14,18 @@ export default function ProposalForm({}: Props) {
   const { register, handleSubmit } = useForm<FormType>();
 
   async function submitProposal(e: FormType) {
-    // const { u_id } = JSON.parse(localStorage.getItem("user")!);
-    // const res = await fetch("/api/user/info", {
-    //   method: "POST",
-    //   body: JSON.stringify({ ...e, u_id }),
-    // });
-    // const data = await res.json();
-    // if (data.status == "success") {
-    //   router.push("/jobs");
-    // } else {
-    //   setFailed(true);
-    // }
+    const { u_id } = JSON.parse(localStorage.getItem("user")!);
+    const res = await fetch("/api/user/info", {
+      method: "POST",
+      body: JSON.stringify({ ...e, u_id }),
+    });
+    const data = await res.json();
+    if (data.status == "success") {
+    //  @ts-ignore
+      router.push("/jobs");
+    } else {
+      setFailed(true);
+    }
   }
 
   return (

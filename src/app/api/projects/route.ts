@@ -8,22 +8,28 @@ import { eq } from "drizzle-orm";
 // 3.Get jobs posted by a specific user 
 
 export async function GET(req: NextRequest) {
-
-    const { searchParams } = new URL(req.url);
-    const u_id = +searchParams.get("u_id")!;
-    let data;
-    if (u_id > 0) {
-        //Fetch projects posted by a specific user
+    try {
+      const { searchParams } = new URL(req.url);
+      const u_id = +searchParams.get("u_id")!;
+      let data;
+      if (u_id > 0) {
+        // Fetch projects posted by a specific user
         data = await db.select().from(projectsTable).where(eq(projectsTable.u_id, u_id));
-    }
-    else {
+        console.log(data, 'backend db');
+        
+      } else {
+        // Fetch all projects
         data = await db.select().from(projectsTable);
+      }
+  
+      return NextResponse.json({ status: "success", data });
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+    // @ts-ignore
+      return NextResponse.json({ status: "error", error: error.message });
     }
-    //Fetch all projects
-
-    return NextResponse.json({ status: "success", data });
-}
-
+  }
+  
 
 export async function POST(req: NextRequest) {
     const { u_id, title, skillTags, description, budget, scope, document } = await req.json();

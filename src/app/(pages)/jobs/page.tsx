@@ -7,19 +7,28 @@ type Props = {};
 export const dynamic = "force-dynamic";
 
 async function fetchJobs() {
-  try{
-  const res = await fetch(MyURL("/api/projects"), {
-    //cache: "no-store",
-    next: { revalidate: 10 },
-  });
-  const data = await res.json();
-  return data;
-  }
-  catch(err){
-    console.log('err',err)
-    return {status:"", data:{}}
+  try {
+    const url = MyURL("/api/projects");
+    console.log('Fetching from URL:', url);
+
+    const res = await fetch(url, {
+      next: { revalidate: 10 },
+    });
+
+    if (!res.ok) {
+      console.error('Failed to fetch jobs:', res.statusText);
+      return { status: "error", data: [] };
+    }
+
+    const data = await res.json();
+    console.log('Fetched jobs:', data);
+    return data;
+  } catch (err) {
+    console.error('Fetch error:', err);
+    return { status: "error", data: [] };
   }
 }
+
 
 export default async function Page({}: Props) {
   const { status, data } = await fetchJobs();
