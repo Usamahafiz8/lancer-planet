@@ -2,7 +2,6 @@
 
 import "@uploadthing/react/styles.css";
 import { UploadButton } from "@/utils/uploadthing";
-
 export default function UploadFile({ setPhoto }: { setPhoto: (url: string) => void }) {
   return (
     <div className="">
