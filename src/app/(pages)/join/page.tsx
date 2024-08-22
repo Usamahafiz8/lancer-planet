@@ -44,7 +44,7 @@ function SignUp() {
     setLoading(true);
 
     const magic = new Magic(
-      process.env.NEXT_PUBLIC_MAGIC_PUBLISHABLE_KEY ??
+      process.env.NEXT_PUBLIC_MAGIC_PUBLISHABLE ??
         "pk_live_7B848874FC801890",
       {
         // @ts-ignore
